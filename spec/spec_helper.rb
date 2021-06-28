@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "bundler/setup"
+require "byebug"
 require "hyrax/json_fields"
 
 RSpec.configure do |config|
