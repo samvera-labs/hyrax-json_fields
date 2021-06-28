@@ -1,5 +1,6 @@
 module Hyrax
   module JsonFields
-    VERSION = '0.1.0'
+    module ApplicationHelper
+    end
   end
 end

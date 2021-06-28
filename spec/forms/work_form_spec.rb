@@ -10,4 +10,3 @@ RSpec.describe Hyrax::JsonFields::WorkForm do
     end
   end
 end
-

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class FakeWork < ActiveFedora::Base
   include ::Hyrax::WorkBehavior
   include ::Hyrax::BasicMetadata
@@ -8,8 +9,8 @@ class FakeWork < ActiveFedora::Base
 
   self.indexer = WorkIndexer
   self.human_readable_type = 'Work'
-  self.json_attributes = { 
-    creator: { 
+  self.json_attributes = {
+    creator: {
       subfields: {
         name_type: {
           required: true,
@@ -23,5 +24,4 @@ class FakeWork < ActiveFedora::Base
       }
     }
   }
-
 end
