@@ -106,6 +106,12 @@ GEM
       execjs (~> 2.0)
     bcp47 (0.3.3)
       i18n
+    bixby (3.0.2)
+      rubocop (= 0.85.1)
+      rubocop-ast (~> 0.3.0)
+      rubocop-performance
+      rubocop-rails
+      rubocop-rspec
     blacklight (6.24.0)
       bootstrap-sass (~> 3.2)
       deprecation
@@ -497,6 +503,7 @@ GEM
     mime-types-data (3.2021.0225)
     mini_magick (4.11.0)
     mini_mime (1.1.0)
+    mini_portile2 (2.5.3)
     minitest (5.14.4)
     multi_json (1.15.0)
     multi_xml (0.6.0)
@@ -510,7 +517,8 @@ GEM
     noid-rails (3.0.3)
       actionpack (>= 5.0.0, < 7)
       noid (~> 0.9)
-    nokogiri (1.11.7-x86_64-linux)
+    nokogiri (1.11.7)
+      mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     nokogumbo (2.0.5)
       nokogiri (~> 1.8, >= 1.8.4)
@@ -669,17 +677,25 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.2)
-    rubocop (1.17.0)
+    rubocop (0.85.1)
       parallel (~> 1.10)
-      parser (>= 3.0.0.0)
+      parser (>= 2.7.0.1)
       rainbow (>= 2.2.2, < 4.0)
-      regexp_parser (>= 1.8, < 3.0)
+      regexp_parser (>= 1.7)
       rexml
-      rubocop-ast (>= 1.7.0, < 2.0)
+      rubocop-ast (>= 0.0.3)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.7.0)
-      parser (>= 3.0.1.1)
+      unicode-display_width (>= 1.4.0, < 2.0)
+    rubocop-ast (0.3.0)
+      parser (>= 2.7.1.4)
+    rubocop-performance (1.7.1)
+      rubocop (>= 0.82.0)
+    rubocop-rails (2.6.0)
+      activesupport (>= 4.2.0)
+      rack (>= 1.1)
+      rubocop (>= 0.82.0)
+    rubocop-rspec (1.41.0)
+      rubocop (>= 0.68.1)
     ruby-box (1.15.0)
       addressable
       json
@@ -766,7 +782,7 @@ GEM
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
     uber (0.1.0)
-    unicode-display_width (2.0.0)
+    unicode-display_width (1.7.0)
     unicode-types (1.6.0)
     webrick (1.7.0)
     websocket-driver (0.7.5)
@@ -778,10 +794,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bixby
   byebug
   hyrax-json_fields!
   rspec-rails
-  rubocop
 
 BUNDLED WITH
    2.1.4

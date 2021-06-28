@@ -11,7 +11,7 @@ Metrics/BlockLength:
   Max: 80
   Exclude:
     - 'spec/**/*.rb'
-    -
+
 RSpec/ExampleLength:
   Max: 25
 
@@ -27,4 +27,3 @@ Style/FrozenStringLiteralComment:
 
 Layout/IndentationConsistency:
   EnforcedStyle: indented_internal_methods
-
